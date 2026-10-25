@@ -1,0 +1,43 @@
+﻿@model List<ProductCatalog.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1> Products </h1>
+
+<p>
+    <a href="/Products/Create" class="btn btn-primary">Add New Product</a>
+</p>
+
+@if (Model.Count == 0)
+{
+    <p> No products have been added yet.</p>
+}
+else
+{
+    <table class= "table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>
+                        <a asp - action = "Details"
+                           asp - route - id = "@product.Id"> Details </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
