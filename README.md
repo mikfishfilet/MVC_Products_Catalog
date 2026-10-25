@@ -12,7 +12,7 @@ ProductCatalog is an ASP.NET Core MVC web application that allows users to view 
 - Validate product names and prices.
 - Save product information in a JSON file.
 
-##Technologies Used
+## Technologies Used
 - C#
 - ASP.NET Core MVC
 - Razor Views
